@@ -10,7 +10,39 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, View, Text, AppRegistry} from 'react-native';
+// https://reactnative.dev/docs/flexbox
 
+export default class AlignItemsBasics extends Component {
+  render() {
+    return (
+      // Try setting `alignItems` to 'flex-start'
+      // Try setting `justifyContent` to `flex-end`.
+      // Try setting `flexDirection` to `row`.
+      <View
+        style={{
+          flex: 1,
+          // flexDirection: 'column', // 縦
+          // // flexDirection: 'column-reverse', // 縦 リバース
+          flexDirection: 'row', // 横
+          // flexDirection: 'row-reverse', // 横 リバース
+          //justifyContent: 'center',
+          //justifyContent: 'flex-end',
+          //justifyContent: 'flex-start',
+          // justifyContent: 'space-around',
+          // justifyContent: 'space-between',
+          justifyContent: 'space-evenly',
+
+          alignItems: 'center',
+        }}>
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+      </View>
+    );
+  }
+}
+
+/// 書き方の違い
 // export default function App() {
 //   return (
 //     <View style={styles.container}>
@@ -48,33 +80,3 @@ import {StyleSheet, View, Text, AppRegistry} from 'react-native';
 //     marginRight: 10,
 //   },
 // });
-
-export default class AlignItemsBasics extends Component {
-  render() {
-    return (
-      // Try setting `alignItems` to 'flex-start'
-      // Try setting `justifyContent` to `flex-end`.
-      // Try setting `flexDirection` to `row`.
-      <View
-        style={{
-          flex: 1,
-          // flexDirection: 'column', // 縦
-          // // flexDirection: 'column-reverse', // 縦 リバース
-          flexDirection: 'row', // 横
-          // flexDirection: 'row-reverse', // 横 リバース
-          //justifyContent: 'center',
-          //justifyContent: 'flex-end',
-          //justifyContent: 'flex-start',
-          // justifyContent: 'space-around',
-          // justifyContent: 'space-between',
-          justifyContent: 'space-evenly',
-
-          alignItems: 'center',
-        }}>
-        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
-      </View>
-    );
-  }
-}
