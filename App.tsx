@@ -25,15 +25,19 @@ export default class AlignItemsBasics extends Component {
           // // flexDirection: 'column-reverse', // 縦 リバース
           flexDirection: 'row', // 横
           // flexDirection: 'row-reverse', // 横 リバース
-          //justifyContent: 'center',
-          //justifyContent: 'flex-end',
-          //justifyContent: 'flex-start',
-          // justifyContent: 'space-around',
-          // justifyContent: 'space-between',
-          justifyContent: 'space-evenly',
+          // justifyContent: 'center',
+          // justifyContent: 'flex-end',
+          // justifyContent: 'flex-start',
+          // justifyContent: 'space-around', // スペースがつく 右左の余白もつく
+          // justifyContent: 'space-between', // スペースがつく　余白はつかない
+          justifyContent: 'space-evenly', // スペースがつく aroundよりちょっと狭い 左右の余白が広い
 
           alignItems: 'center',
+          alignContent: 'stretch',
         }}>
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
         <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
         <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
         <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
