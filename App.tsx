@@ -21,7 +21,8 @@ export default class AlignItemsBasics extends Component {
       <View style={styles.container}>
         <View style={styles.view1}>
           <View style={styles.view5}>
-            <Text>View1</Text>
+            <Text style={styles.text}>View1</Text>
+            <View style={styles.view4} />
           </View>
         </View>
         {/* <View style={styles.view2} />
@@ -67,12 +68,14 @@ const styles = StyleSheet.create({
   view4: {
     width: 100,
     height: 100,
-    backgroundColor: 'skyblue',
+    backgroundColor: 'gray',
+    marginLeft: 200,
+    marginTop: 100,
   },
   view5: {
     flex: 1,
-    backgroundColor: 'red',
-    alignItems: 'center',
+    backgroundColor: 'pink',
+    // alignItems: 'center',
     justifyContent: 'center',
     // marginTop: 10,
     // marginLeft: 10,
@@ -80,10 +83,17 @@ const styles = StyleSheet.create({
     // marginRight: 10,
     marginHorizontal: 10,
     marginVertical: 10,
+    flexDirection: 'row',
+  },
+  text: {
+    // height: 20,
+    // width: 100,
+    backgroundColor: 'red',
   },
 });
 
 // BaseViewがあってその中で　viewやTextなどを出いく　Viewの階層をいろいろみてやっていくと良さそう
+// BaseのViewのレイアウトの影響を、子Viewはうける　ここもよく勉強が必要
 
 /// 書き方の違い
 // export default function App() {
