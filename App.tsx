@@ -20,12 +20,14 @@ export default class AlignItemsBasics extends Component {
       // Text有無
       <View style={styles.container}>
         <View style={styles.view1}>
-          <Text>View1</Text>
+          <View style={styles.view5}>
+            <Text>View1</Text>
+          </View>
         </View>
-        <View style={styles.view2} />
+        {/* <View style={styles.view2} />
         <View style={styles.view3} />
         <View style={styles.view2} />
-        <View style={styles.view1} />
+        <View style={styles.view1} /> */}
       </View>
     );
   }
@@ -48,8 +50,8 @@ const styles = StyleSheet.create({
     alignContent: 'stretch',
   },
   view1: {
-    width: 50,
-    height: 50,
+    width: 400,
+    height: 500,
     backgroundColor: 'powderblue',
   },
   view2: {
@@ -68,9 +70,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'skyblue',
   },
   view5: {
-    width: 50,
-    height: 50,
-    backgroundColor: 'powderblue',
+    flex: 1,
+    backgroundColor: 'red',
+    alignItems: 'center',
+    justifyContent: 'center',
+    // marginTop: 10,
+    // marginLeft: 10,
+    // marginBottom: 10,
+    // marginRight: 10,
+    marginHorizontal: 10,
+    marginVertical: 10,
   },
 });
 
