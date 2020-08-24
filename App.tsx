@@ -83,6 +83,8 @@ const styles = StyleSheet.create({
   },
 });
 
+// BaseViewがあってその中で　viewやTextなどを出いく　Viewの階層をいろいろみてやっていくと良さそう
+
 /// 書き方の違い
 // export default function App() {
 //   return (
